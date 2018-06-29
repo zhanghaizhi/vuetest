@@ -7,8 +7,13 @@ import axios from './api/config'
 // import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
+import dkui from 'dkui'
+// import dialogTwo from './plugin/test.js'
+// Vue.use(dialogTwo)
+
 // Vue.use(ElementUI);
 import { Radio,Switch } from 'element-ui';
+Vue.use(dkui)
 Vue.use(Radio)
 Vue.use(Switch)
 

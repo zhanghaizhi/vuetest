@@ -1,6 +1,12 @@
 <template>
     <div>
-       hellokk
+       <test-dialog ref="dialog"
+            title="kk"
+            content="this is content"
+            :show="show"
+            borderRadius=3vw
+            :single="false">
+       </test-dialog>
     </div>
 </template>
 <style  scoped>
@@ -10,7 +16,7 @@
     export default {
         data(){
            return {
-
+               show:true,
            }
         },
         components:{
@@ -23,7 +29,6 @@
 
         },
         created(){
-
         }
     }
 </script>
