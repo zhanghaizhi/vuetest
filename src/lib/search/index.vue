@@ -1,13 +1,6 @@
 <template>
     <div>
-       <test-dialog ref="dialog"
-            title="kk"
-            content="this is content"
-            :show="show"
-            borderRadius=3vw
-            :single="false">
-       </test-dialog>
-       <test-search></test-search>
+        <p>这是一个搜索的组件</p>
     </div>
 </template>
 <style  scoped>
@@ -15,9 +8,10 @@
 </style>
 <script>
     export default {
+        name:"test-search",
         data(){
            return {
-               show:true,
+
            }
         },
         components:{
@@ -30,6 +24,7 @@
 
         },
         created(){
-        },
+
+        }
     }
 </script>

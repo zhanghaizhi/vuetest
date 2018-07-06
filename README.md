@@ -1,6 +1,6 @@
 # vuetest
 
-> A Vue.js project
+> 前端培训ppt实例使用，以及npm包测试使用
 
 ## Build Setup
 

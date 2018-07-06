@@ -13,6 +13,7 @@ export default {
 </script>
 
 <style>
+/* @import './assets/gloabl.less'; */
 html,body{
   margin:0px;
   padding:0px;
