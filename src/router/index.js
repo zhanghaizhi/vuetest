@@ -6,6 +6,7 @@ import Sex from '@/page/Sex'
 import hellokk from '@/page/hellokk'
 import LessDemo from '@/page/LessDemo'
 import SassDemo from '@/page/SassDemo'
+import Box from '@/page/Box'
 
 Vue.use(Router)
 
@@ -49,6 +50,11 @@ export default new Router({
       path:'/SassDemo',
       name:'SassDemo',
       component:SassDemo
+    },
+    {
+      path:'/Box',
+      name:'Box',
+      component:Box
     }
     
   ]
