@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-   
     <router-view/>
   </div>
 </template>
@@ -12,8 +10,8 @@ export default {
 }
 </script>
 
-<style>
-/* @import './assets/gloabl.less'; */
+<style lang="less">
+@import './assets/less/gloabl.less';
 html,body{
   margin:0px;
   padding:0px;

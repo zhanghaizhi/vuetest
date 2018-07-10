@@ -1,22 +1,20 @@
 <template>
     <div>
-        <p class="lesscolor">less颜色变量使用<span>我是嵌套的</span></p>
+        <div class="banner box">
+            我只是个栗子
+            <span></span>
+        </div>
+        <div class="boxtwo">
+            我是延伸的栗子
+            <span>wo</span>
+        </div>
     </div>
 </template>
 <style lang="less">
- @fontcolor:red;
- @greencolor:green;
- .borderred{
-     border-top:1px solid red;
- }
- .lesscolor{
-     color:@fontcolor;
-     .borderred;
-     span{
-         color:@greencolor;
-     }
- }
-
+.box{
+    height:200px;
+    width:200px;
+}
 </style>
 <script>
    

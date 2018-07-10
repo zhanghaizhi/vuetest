@@ -1,0 +1,131 @@
+@import './variable.less';//引入全局的变量
+@import './mixin.less';
+// 变量的定义是可以放在被使用之后的，
+@my-choice:banner;//定义标签名
+@scolor:color;//定义属性名
+@images:"./../";//定义统一路径
+@font-color:"color-red";//变量的赋值
+@color-red:red;//定义变量
+@bw:@aw;
+@aw:80%;
+
+.@{my-choice} {
+    @{scolor}:@@font-color;//变量赋值之后的引用
+    background: url("@{images}/logo.png") no-repeat;
+    width:@bw;
+    @bw:50%;//可以重新进行赋值
+}
+
+// .box-color{
+//    color:@color-blue;
+// }
+// .boxtwo-color{
+//    color:@color-green;
+// }
+// 延伸extend***************************extend里的表达式要完全匹配当传入all时，替换表达式里相同的值(把extend表达式里的值给自己用)有点像继承父类
+
+// .boxtwo:extend(.boxtwo-color){//执行后是green颜色
+//     &:extend(.box-color);
+// }
+// .box,.boxtwo{
+//     &:extend(.boxtwo-color);//每个规则都扩展了
+// }
+// .box{
+//     span{
+//         color:#fff;
+//     }
+// }
+// .box:extend(.box span){//执行后是红色，嵌套的选择器也可以延伸
+//     color:red;
+// }
+
+// 在@media中， 仅匹配同一媒体声明中的选择器。顶级扩展，匹配，所有的规则
+
+
+// .box-color,.boxtwo-color{
+//     color:@color-blue;
+//  }
+// .box:extend(.box-color,.boxtwo-color){
+//     font-size:20px;
+// }
+
+// mixin与extend对比；mixin会把所有属性复制过来，可能会导致css内容的重复，extend,他是在原来的基础上，加上扩展的标签。mixin只能适合简单的选择器，extend则多样性
+
+
+
+
+
+// 混入mixin*************************
+// .fbsize{
+//     font-size:30px;
+// }
+// 可以带括号，也可以不带
+
+//类选择器
+// .box{
+//  .fbsize();
+// }
+
+// .box{
+//     .fbsize;
+// }
+
+//id选择器
+// #idea{
+//     display: flex;
+// }
+// .box{
+//     #idea;
+// }
+
+// 错误的写法
+// p{
+//     color:yellow;
+// }
+// .box{
+//     p();
+// }
+
+//不想让fbsize出现，加（）；
+// .fbsize1(){
+//     .fcolor{//可以添加选择器
+//         font-size:30px;
+//     }
+   
+// }
+// .fbsize2(){
+//     span{//可以添加选择器
+//         font-size:30px;
+//     }
+   
+// }
+// .box{
+//     .fbsize1;
+// }
+// 结果 .box fcolor{}
+// .box{
+//     .fbsize1> .fcolor;
+// }
+//结果.box{font-size:30px;}
+// 错误的写法
+// .box{
+//     .fbsize2 > span;
+// }
+// .box{
+//     .fbsize2
+// }
+//.box span{}
+
+// 参数混合，mixin中加入参数
+.border-radius(@radius){
+    border-radius: @radius;
+}
+.box{
+    .border-radius(4px)
+}
+// 模式匹配
+
+
+
+
+
