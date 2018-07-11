@@ -107,10 +107,11 @@
 //     .fbsize1> .fcolor;
 // }
 //结果.box{font-size:30px;}
-// 错误的写法
+// 错误的写法，不能跟span
 // .box{
 //     .fbsize2 > span;
 // }
+// 正确用法
 // .box{
 //     .fbsize2
 // }
@@ -148,6 +149,11 @@
 //     padding:@count;
 // }
 // 规则集的使用需要使用()括号,分离的规则集调用不能返回属性变量，分离规则中的值变量不可被外界覆盖
+// @detached-ruleset: { 
+//     .mixin() {
+//         color:blue;
+//     }
+// };
 // @rules:{margin:10px};
 // .margin-one(@rules){
 //     @rules();
@@ -155,6 +161,7 @@
 // .box{
 //     .margin-one(@rules)
 // }
+
 // @import (optional, reference) "foo.less";
 // reference：使用Less文件但不输出
 // inline：在输出中包含源文件但不处理它
@@ -186,7 +193,7 @@
 // 输出transform: scale(1) rotate(2deg);transform: scale(1),rotate(2deg);
 
 
-// &符号的使用,&表示所有父选择器，不是最近的父选择器
+// &符号的使用,&表示所有父选择器，不是最近的父选择器，&符号可以多次的使用
 // .box{
 //     color:red;
 //     &:hover{
@@ -195,7 +202,30 @@
 // }
 
 //函数手册
-
+// 颜色函数把一个
+// color
+// 可以获取图片的尺寸
+// image-size
+// 获取图片的宽
+// image-width
+// 获取图片的高
+// image-height
+// 把一个数的单位换成另一个单位
+// convert
+// 资源类型的转换
+// data-uri
+// 当没有其他的mixin匹配时返回true，其他情况返回false 
+// default()
+// 给一个值加上获取去除单位unit(5, px)，unit(5em)
+// unit
+// 获取单位
+// get-unit
+// svg的颜色渐变background-image: svg-gradient(to right, red, green 30%, blue);
+// svg-gradient
+// .box {
+//     background-image: svg-gradient(to right, red, green 30%, blue);
+// }
+// 其他的一些函数
 
 
 
