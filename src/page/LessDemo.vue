@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="banner box">
+        <div class="banner box padding20">
             我只是个栗子
             <span></span>
         </div>

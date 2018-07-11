@@ -1,4 +1,4 @@
-@import './variable.less';//引入全局的变量
+@import (reference)'./variable.less';//引入全局的变量
 @import './mixin.less';
 // 变量的定义是可以放在被使用之后的，
 @my-choice:banner;//定义标签名
@@ -117,13 +117,86 @@
 //.box span{}
 
 // 参数混合，mixin中加入参数
-.border-radius(@radius){
-    border-radius: @radius;
-}
-.box{
-    .border-radius(4px)
-}
+// .border-radius(@radius){
+//     border-radius: @radius;
+// }
+// .box{
+//     .border-radius(4px)
+// }
 // 模式匹配
+// .color-one(@colorone;){
+//     color:@colorone;
+// }
+// .color-one(@colorone;@colortwo){
+//     color:@colorone;
+//     background-color: @colortwo;
+// }
+// .box{
+//     .color-one(red,green)
+// }
+//mixin作为函数
+
+// .padding-one(@x,@y){
+//     .padding-two{
+//         @count:(@x+@y);
+//     }
+
+// }
+// .box{
+//     .padding-one(10px,20px);
+//     .padding-two();
+//     padding:@count;
+// }
+// 规则集的使用需要使用()括号,分离的规则集调用不能返回属性变量，分离规则中的值变量不可被外界覆盖
+// @rules:{margin:10px};
+// .margin-one(@rules){
+//     @rules();
+// }
+// .box{
+//     .margin-one(@rules)
+// }
+// @import (optional, reference) "foo.less";
+// reference：使用Less文件但不输出
+// inline：在输出中包含源文件但不处理它
+// less：无论文件扩展名是什么，都将文件视为Less文件
+// css：无论文件扩展名是什么，都将文件视为CSS文件
+// once：只包含一次文件（这是默认行为）
+// multiple：多次包含该文件
+// optional：找不到文件时继续编译
+
+// 循环，递归
+
+// .generate-padding(@n,@i:1) when (@i<=@n){
+//     @name:@i*10;
+//     .padding@{name} {
+//         padding:(10px*@i);
+//     }
+//     .generate-padding(@n,(@i+1));
+// }
+// .generate-padding(4);
+
+// 合并使用+或者+_,+号以逗号连接，+_以空格连接
+// .mixin() {
+//     transform+_: scale(1);
+// }
+// .box {
+//     .mixin();
+//     transform+_: rotate(2deg);
+// }
+// 输出transform: scale(1) rotate(2deg);transform: scale(1),rotate(2deg);
+
+
+// &符号的使用,&表示所有父选择器，不是最近的父选择器
+// .box{
+//     color:red;
+//     &:hover{
+//         color:green;
+//     }
+// }
+
+//函数手册
+
+
 
 
 
