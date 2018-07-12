@@ -12,6 +12,7 @@ export default {
 
 <style lang="less">
 @import './assets/less/gloabl.less';
+
 html,body{
   margin:0px;
   padding:0px;

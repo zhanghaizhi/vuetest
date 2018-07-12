@@ -1,0 +1,26 @@
+// .scss,与.sass的区别，.sass要求更严格，而且不需要写括号
+@import './variable.scss';
+// 嵌套规则以及变量的使用
+.box{
+    span{
+        color:$color-red;
+    }
+}
+// &父选择器
+.box{
+    &:hover{
+        color:$color-green;
+    }
+    &-header{
+        height:40px;
+    }
+}
+// 属性的嵌套
+.box{
+    font: {
+        size:14px;
+        weight:bold;
+    }
+}
+// 注释的输出，单行的注释，最后不会输出，多行的注释会输出
+
