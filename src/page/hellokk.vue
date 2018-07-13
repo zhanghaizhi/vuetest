@@ -1,9 +1,10 @@
 <template>
     <div>
+        <p></p>
        <test-dialog ref="dialog"
             title="kk"
             content="this is content"
-            :show="show"
+            :show="false"
             borderRadius=3vw
             :single="false">
        </test-dialog>
@@ -27,7 +28,7 @@
 
         },
         mounted(){
-
+            console.log("kk")
         },
         created(){
         },

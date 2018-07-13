@@ -14,6 +14,7 @@ import testDialog from 'dkui'
 
 // Vue.use(ElementUI);
 import { Radio,Switch } from 'element-ui';
+import store from './store';
 Vue.use(testDialog)
 Vue.use(Radio)
 Vue.use(Switch)
@@ -24,6 +25,7 @@ Vue.prototype.$axios=axios;
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
