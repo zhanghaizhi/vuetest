@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="hello" ref="kk2">
     <el-radio v-model="radio" label="1">备选项1</el-radio>
     <el-radio v-model="radio" label="2">备选项2</el-radio>
     <br/>
@@ -58,10 +58,21 @@ export default {
     }
   },
   mounted() {
+    console.log( this.$refs.kk2)
     this.$refs.kk.style = "background:red;";
-    this.$axios.get("/static/test.json").then((res) => {
-      this.name=res.data.name;
-      this.sex=res.data.sex;
+    // this.$axios.get("/static/test.json",{a:JSON.stringify([1,,3,4])}).then((res) => {
+    //   this.name=res.data.name;
+    //   this.sex=res.data.sex;
+    // })
+    this.$axios({
+      method:'get',
+      url:'/static/test.json',
+      params:{
+        b:1
+      },
+      data:{
+        params:{a:1}
+      }
     })
   }
 };
