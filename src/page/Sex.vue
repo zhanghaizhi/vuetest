@@ -1,14 +1,20 @@
 <template>
     <div class="sex">
      性别：{{sex}}
+     <el-button type="primary">主要按钮</el-button>
+     <p class="colorred">122333</p>
     </div>
 </template>
-<style  scoped>
+<style  >
 .sex{
     color:blue;
     font-size:24px;
     margin-top:30px;
     text-align: left;
+}
+p{
+    width:100px;
+    height:100px;
 }
 </style>
 <script>

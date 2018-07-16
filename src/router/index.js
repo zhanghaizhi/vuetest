@@ -7,6 +7,7 @@ import hellokk from '@/page/hellokk'
 import LessDemo from '@/page/LessDemo'
 import SassDemo from '@/page/SassDemo'
 import Box from '@/page/Box'
+import elemenhh from './../page/elementuiindex'
 
 Vue.use(Router)
 
@@ -50,6 +51,11 @@ export default new Router({
       path:'/SassDemo',
       name:'SassDemo',
       component:SassDemo
+    },
+    {
+      path:'/elemenhh',
+      name:'elemenhh',
+      component:elemenhh
     },
     {
       path:'/Box',

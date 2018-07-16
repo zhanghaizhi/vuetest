@@ -5,19 +5,20 @@ import App from './App'
 import router from './router'
 // import axios from './api/config'
 import axios from 'axios'
-// import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
+import ElementUI from 'element-ui';
+// import 'element-ui/lib/theme-chalk/index.css';
+import './../theme/index.css'
 
 import testDialog from 'dkui'
 // import testDialog from './lib/index.js'
 // Vue.use(dialogTwo)
 
-// Vue.use(ElementUI);
-import { Radio,Switch } from 'element-ui';
+Vue.use(ElementUI);
+// import { Radio,Switch } from 'element-ui';
 import store from './store';
 Vue.use(testDialog)
-Vue.use(Radio)
-Vue.use(Switch)
+// Vue.use(Radio)
+// Vue.use(Switch)
 
 Vue.config.productionTip = false
 Vue.prototype.$axios=axios;
